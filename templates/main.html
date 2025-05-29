@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Загрузка изображений</title>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+<div class="form-grid">
+  <div class="form-column">
+    <h1>Загрузить одно изображение</h1>
+    <form id="upload-form">
+      {% csrf_token %}
+      <input type="file" name="image" required>
+      <button type="submit">Загрузить</button>
+    </form>
+    <div class="loader" id="upload-loader">Загрузка...</div>
+  </div>
+
+  <div class="form-column">
+    <h1>Загрузить изображение 100 раз</h1>
+    <form id="mass-upload-form">
+      {% csrf_token %}
+      <input type="file" name="image" required>
+      <button type="submit">Загрузить 100 раз</button>
+    </form>
+    <div class="loader" id="mass-upload-loader">Массовая загрузка...</div>
+  </div>
+</div>
+
+<h2>Последние загруженные изображения:</h2>
+<div id="error-message" class="error"></div>
+
+<table id="image-table" style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 8px;">Случайное число</th>
+      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 8px;">Фото</th>
+      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 8px;">Дата</th>
+    </tr>
+  </thead>
+  <tbody id="image-list"></tbody>
+</table>
+
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
