@@ -47,9 +47,9 @@ Django-приложение для загрузки, хранения и мас�
     
     #YANDEX_OBJECT_STORAGE
     
-    YANDEX_ACCESS_KEY=YANDEX_ACCESS_KEY
-    YANDEX_SECRET_KEY=YANDEX_SECRET_KEY
-    YANDEX_BUCKET_NAME=YANDEX_BUCKET_NAME
+    YANDEX_ACCESS_KEY=YANDEX_ACCESS_KEY     #(прикреплю отдельно)
+    YANDEX_SECRET_KEY=YANDEX_SECRET_KEY     #(прикреплю отдельно)
+    YANDEX_BUCKET_NAME=YANDEX_BUCKET_NAME   #(прикреплю отдельно)
    ```
    
 3. **Соберите и запустите контейнеры**:

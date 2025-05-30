@@ -7,5 +7,5 @@ __pycache__/
 media
 */migrations/*.py
 */migrations/*.pyc
-staticfiles
-uploads
+staticfiles/
+uploads/
